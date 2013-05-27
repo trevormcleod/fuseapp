@@ -1,0 +1,19 @@
+extends layout
+
+block content
+	div.container
+		h1= title
+		p Please enter your request URL below.
+		br
+		form
+			fieldset
+				legend Request Form
+				label URL to Scrape
+				input(type="text", placeholder="Please enter a URL")#URL
+				span.help-block Example: http://www.fuse.tv
+				div.btn.btn-primary#submit Submit
+		form 
+			fieldset
+				legend Response Area
+				ol#responseArea
+
