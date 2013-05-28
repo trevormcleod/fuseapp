@@ -37,6 +37,7 @@ module.exports.create = function (app) {
 			    var $ = window.$;
 			    var linkArray = [];
 			    var description;
+			    console.log(body);
 			    $('a').each(function() {
 			    	var href = $(this).attr('href');
 			    	linkArray.push(href);
@@ -48,7 +49,7 @@ module.exports.create = function (app) {
 			    	}
 			    });
 			    var title = $('title').html();
-			    res.send({linkArray: linkArray, title: title, desc: description});
+			    res.send({linkArray: linkArray, title: title, desc: description, URL: URL});
 			  });
 		  	}
 		});
